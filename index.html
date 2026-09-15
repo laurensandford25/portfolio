@@ -3,15 +3,175 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lauren Sandford</title>
+    <title>Lauren Sandford | Digital Marketer &amp; SEO-Led Content</title>
+    <meta
+      name="description"
+      content="Lauren Sandford is a digital marketer specializing in SEO-led content, copywriting, and content strategy."
+    />
+    <meta property="og:title" content="Lauren Sandford | Digital Marketer &amp; SEO-Led Content" />
+    <meta
+      property="og:description"
+      content="Digital marketer specializing in SEO-led content, copywriting, and content strategy."
+    />
+    <meta property="og:url" content="https://laurenmsandford.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <h1>Lauren Sandford</h1>
-      <p>This page is live on GitHub Pages. Edit these files, commit, and push to publish.</p>
-      <p id="status"></p>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="index.html">Lauren Sandford</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="hero" aria-labelledby="hero-brand">
+        <div class="reveal">
+          <p class="hero__brand" id="hero-brand">Lauren Sandford</p>
+          <h1 class="hero__role">Digital marketer specializing in SEO-led content</h1>
+          <p class="hero__support">
+            I help brands get found—and turn that attention into clear, useful writing people actually want to read.
+          </p>
+        </div>
+        <div class="hero__panel reveal reveal-delay-1" aria-hidden="true">
+          <p class="hero__panel-label">Editorial color block — swap for a photo or texture later if you want</p>
+        </div>
+      </section>
+
+      <section class="section section--tight-top" aria-labelledby="bio-heading">
+        <p class="eyebrow reveal">Career</p>
+        <h2 id="bio-heading" class="sr-only">About my career</h2>
+        <div class="bio-block reveal">
+          <p>
+            <span class="placeholder-note">[Homepage bio — ~80–120 words]</span>
+            Replace this with a short professional intro: the kinds of teams you’ve worked with, the work you’re
+            strongest at (SEO strategy, content, copy), and what you’re looking for next. Keep it warm and concrete—
+            this is the “hire me” paragraph before the proof below.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="featured-heading">
+        <div class="section__intro reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="featured-heading">Recent projects</h2>
+          <p>Three highlights from the full work list. Swap these for your strongest pieces first.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project reveal">
+            <div>
+              <div class="project__meta">
+                <span class="tag tag--seo">SEO</span>
+                <span class="tag tag--content">Content</span>
+              </div>
+              <h3>Project 1 title</h3>
+              <p>
+                <span class="placeholder-note">[Project 1 summary]</span>
+                Two sentences on the brief and what you delivered.
+              </p>
+              <p class="project__role"><strong>Role:</strong> <span class="placeholder-note">[Your role]</span></p>
+              <p class="project__outcome">
+                <strong>Outcome:</strong> <span class="placeholder-note">[Metric or qualitative result — or remove]</span>
+              </p>
+              <a class="project__link" href="work.html#project-1">View on Work page</a>
+            </div>
+            <figure class="project__media project__media--green">
+              <span class="project__media-label">[Screenshot or writing excerpt for Project 1]</span>
+            </figure>
+          </article>
+
+          <article class="project reveal reveal-delay-1">
+            <div>
+              <div class="project__meta">
+                <span class="tag tag--content">Content</span>
+              </div>
+              <h3>Project 2 title</h3>
+              <p>
+                <span class="placeholder-note">[Project 2 summary]</span>
+                Two sentences on the brief and what you delivered.
+              </p>
+              <p class="project__role"><strong>Role:</strong> <span class="placeholder-note">[Your role]</span></p>
+              <p class="project__outcome">
+                <strong>Outcome:</strong> <span class="placeholder-note">[Metric or qualitative result — or remove]</span>
+              </p>
+              <a class="project__link" href="work.html#project-2">View on Work page</a>
+            </div>
+            <figure class="project__media">
+              <span class="project__media-label">[Screenshot or writing excerpt for Project 2]</span>
+            </figure>
+          </article>
+
+          <article class="project reveal reveal-delay-2">
+            <div>
+              <div class="project__meta">
+                <span class="tag tag--copy">Copy</span>
+                <span class="tag tag--seo">SEO</span>
+              </div>
+              <h3>Project 3 title</h3>
+              <p>
+                <span class="placeholder-note">[Project 3 summary]</span>
+                Two sentences on the brief and what you delivered.
+              </p>
+              <p class="project__role"><strong>Role:</strong> <span class="placeholder-note">[Your role]</span></p>
+              <p class="project__outcome">
+                <strong>Outcome:</strong> <span class="placeholder-note">[Metric or qualitative result — or remove]</span>
+              </p>
+              <a class="project__link" href="work.html#project-3">View on Work page</a>
+            </div>
+            <figure class="project__media project__media--blue">
+              <span class="project__media-label">[Screenshot or writing excerpt for Project 3]</span>
+            </figure>
+          </article>
+        </div>
+
+        <div class="cta-row reveal">
+          <a class="button button--primary" href="work.html">See all work</a>
+          <a class="button button--ghost" href="contact.html">Get in touch</a>
+        </div>
+      </section>
+
+      <aside class="color-band" aria-label="Contact prompt">
+        <div class="color-band__inner reveal">
+          <div>
+            <h2>Have a role that needs SEO-led content?</h2>
+            <p>I’m glad to share more samples, walk through a case study, or talk about fit.</p>
+          </div>
+          <a class="button button--primary" href="contact.html">Contact me</a>
+        </div>
+      </aside>
     </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>© <span data-year></span> Lauren Sandford</p>
+        <div class="site-footer__links">
+          <a href="https://www.linkedin.com/in/lauren-sandford/" rel="noopener noreferrer" target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:you@email.com">you@email.com</a>
+        </div>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
