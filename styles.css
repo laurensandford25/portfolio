@@ -320,6 +320,101 @@ p:last-child {
   transform: rotate(-12deg);
 }
 
+/* Text-only homepage hero */
+.hero--text {
+  display: block;
+  padding: clamp(4rem, 9vw, 6rem) var(--space) clamp(3.5rem, 7vw, 5rem);
+}
+
+.hero--text .hero__copy {
+  max-width: 56.25rem;
+  width: 100%;
+}
+
+.hero--text .hero__copy::before {
+  display: none;
+}
+
+.hero--text .hero__role {
+  font-size: clamp(2rem, 4.8vw, 3.35rem);
+  max-width: 53rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.12;
+}
+
+.hero--text .hero__support {
+  max-width: 47.5rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.hero__bio {
+  max-width: 47.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.hero__bio p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Portfolio cards (homepage) */
+.project-grid--cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.project-card {
+  min-width: 0;
+}
+
+.project-card__image {
+  display: block;
+  width: 100%;
+  height: 26.25rem;
+  overflow: hidden;
+  background: var(--sage);
+  box-shadow: var(--shadow-soft);
+}
+
+.project-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.45s ease;
+}
+
+.project-card__image:hover img {
+  transform: scale(1.03);
+}
+
+.project-card__content {
+  padding-top: 1.5rem;
+}
+
+.project-card__content h3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-card__content p {
+  margin-bottom: 1rem;
+}
+
 /* —— Bio —— */
 .bio-block {
   max-width: 40rem;
@@ -725,9 +820,19 @@ p:last-child {
   .button--primary:hover {
     transform: none;
   }
+
+  .project-card__image:hover img {
+    transform: none;
+  }
 }
 
 /* —— Responsive —— */
+@media (max-width: 900px) {
+  .project-grid--cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 800px) {
   .hero {
     grid-template-columns: 1fr;
@@ -785,5 +890,19 @@ p:last-child {
 
   .site-header__inner {
     position: relative;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero--text {
+    padding: 4rem var(--space) 3.5rem;
+  }
+
+  .project-grid--cards {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card__image {
+    height: 25rem;
   }
 }
