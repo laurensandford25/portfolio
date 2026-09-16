@@ -6,7 +6,7 @@
     <title>Contact | Lauren Sandford</title>
     <meta
       name="description"
-      content="Contact Lauren Sandford — email, LinkedIn, and resume download for digital marketing and SEO-led content roles."
+      content="Contact Lauren Sandford — send a message, connect on LinkedIn, or download a resume for digital marketing and SEO-led content roles."
     />
     <meta property="og:title" content="Contact | Lauren Sandford" />
     <meta
@@ -50,35 +50,89 @@
         <p class="eyebrow reveal">Contact</p>
         <h1 id="contact-heading" class="reveal">Let’s talk</h1>
         <p class="reveal" style="margin-top: 0.75rem">
-          Open to digital marketing, SEO, and content roles. Reach out by email or LinkedIn!
+          Open to digital marketing, SEO, and content roles. Send a note below, or find me on LinkedIn!
         </p>
 
-        <ul class="contact-list reveal" style="margin-top: 2.5rem">
-          <li>
-            <span class="contact-list__label">Email</span>
-            <a href="mailto:laurensandford25@gmail.com">me@laurenmsandford.com</a>
-          </li>
-          <li>
-            <span class="contact-list__label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/lauren-sandford/" rel="noopener noreferrer" target="_blank"
-              >linkedin.com/in/lauren-sandford</a
-            >
-          </li>
-          <li>
-            <span class="contact-list__label">Resume</span>
-            <a href="/resume.pdf" download="Lauren_Sandford_Resume.pdf">Download resume (PDF)</a>
-          </li>
-        </ul>
+        <div class="contact-layout">
+          <div class="reveal">
+            <p class="contact-form__success" data-form-success hidden tabindex="-1">
+              Thanks — your message is on its way. I’ll get back to you soon.
+            </p>
 
-        <div class="cta-row reveal">
-          <a class="button button--primary" href="mailto:you@email.com">Email me</a>
-          <a
-            class="button button--secondary"
-            href="https://www.linkedin.com/in/lauren-sandford/"
-            rel="noopener noreferrer"
-            target="_blank"
-            >View LinkedIn</a
-          >
+            <form
+              class="contact-form"
+              action="https://formsubmit.co/laurensandford25@gmail.com"
+              method="POST"
+              accept-charset="UTF-8"
+            >
+              <input type="hidden" name="_subject" value="New message from laurenmsandford.com" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://laurenmsandford.com/contact/?sent=1" />
+
+              <p class="contact-form__honey" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="_honey" tabindex="-1" autocomplete="off" />
+              </p>
+
+              <div class="contact-form__row">
+                <div class="contact-form__field">
+                  <label for="first-name">First name</label>
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="First name"
+                    autocomplete="given-name"
+                    maxlength="80"
+                    required
+                  />
+                </div>
+                <div class="contact-form__field">
+                  <label for="last-name">Last name</label>
+                  <input
+                    type="text"
+                    id="last-name"
+                    name="Last name"
+                    autocomplete="family-name"
+                    maxlength="80"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact-form__field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  maxlength="120"
+                  required
+                />
+              </div>
+
+              <div class="contact-form__field">
+                <label for="message">Message</label>
+                <textarea id="message" name="Message" maxlength="5000" required></textarea>
+              </div>
+
+              <button class="button button--primary" type="submit">Send message</button>
+            </form>
+          </div>
+
+          <ul class="contact-list reveal reveal-delay-1">
+            <li>
+              <span class="contact-list__label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/lauren-sandford/" rel="noopener noreferrer" target="_blank"
+                >linkedin.com/in/lauren-sandford</a
+              >
+            </li>
+            <li>
+              <span class="contact-list__label">Resume</span>
+              <a href="/resume.pdf" download="Lauren_Sandford_Resume.pdf">Download resume (PDF)</a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
@@ -90,7 +144,6 @@
           <a href="https://www.linkedin.com/in/lauren-sandford/" rel="noopener noreferrer" target="_blank"
             >LinkedIn</a
           >
-          <a href="mailto:you@email.com">you@email.com</a>
         </div>
       </div>
     </footer>

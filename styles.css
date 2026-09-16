@@ -81,7 +81,9 @@ a:hover {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 3px;
 }
@@ -613,6 +615,17 @@ p:last-child {
   cursor: pointer;
 }
 
+button.button {
+  appearance: none;
+  background-image: none;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
 .button--primary {
   background: var(--teal);
   color: var(--white);
@@ -732,6 +745,80 @@ p:last-child {
 }
 
 /* —— Contact —— */
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.7fr);
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+  margin-top: 2.5rem;
+}
+
+.contact-form {
+  position: relative;
+  display: grid;
+  gap: 1.15rem;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-form label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--green-primary);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.85rem;
+}
+
+.contact-form textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  border-color: var(--teal);
+}
+
+.contact-form__honey {
+  display: none;
+}
+
+.contact-form__success {
+  margin: 0 0 1.25rem;
+  padding: 0.9rem 1rem;
+  background: var(--green-soft);
+  border: 1px solid rgba(1, 133, 139, 0.28);
+  border-radius: var(--radius-sm);
+  color: var(--green-ink);
+}
+
+.contact-form .button {
+  justify-self: start;
+}
+
 .contact-list {
   list-style: none;
   margin: 0;
@@ -746,7 +833,7 @@ p:last-child {
   border-bottom: 1px solid var(--line);
 }
 
-.contact-list__label {
+.contact-list .contact-list__label {
   display: block;
   font-size: 0.75rem;
   font-weight: 600;
@@ -868,7 +955,8 @@ p:last-child {
 
   .project,
   .work-list .project,
-  .about-layout {
+  .about-layout,
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 
@@ -916,6 +1004,10 @@ p:last-child {
 }
 
 @media (max-width: 640px) {
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+
   .hero--text {
     padding: 4rem var(--space) 3.5rem;
   }

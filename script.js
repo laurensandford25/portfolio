@@ -25,6 +25,24 @@ document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = String(new Date().getFullYear());
 });
 
+const contactForm = document.querySelector(".contact-form");
+const formSuccess = document.querySelector("[data-form-success]");
+
+if (formSuccess && new URLSearchParams(location.search).get("sent") === "1") {
+  formSuccess.hidden = false;
+  formSuccess.focus();
+}
+
+if (contactForm) {
+  contactForm.addEventListener("submit", () => {
+    const submitButton = contactForm.querySelector("[type=submit]");
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending…";
+    }
+  });
+}
+
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (!reduceMotion && "IntersectionObserver" in window) {
