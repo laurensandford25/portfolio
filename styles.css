@@ -327,7 +327,7 @@ p:last-child {
 }
 
 .hero--text .hero__copy {
-  max-width: 56.25rem;
+  max-width: none;
   width: 100%;
 }
 
@@ -337,19 +337,20 @@ p:last-child {
 
 .hero--text .hero__role {
   font-size: clamp(2rem, 4.8vw, 3.35rem);
-  max-width: 53rem;
+  max-width: none;
   margin: 0 0 1.5rem;
   line-height: 1.12;
 }
 
 .hero--text .hero__support {
-  max-width: 47.5rem;
+  max-width: none;
   font-size: 1.25rem;
   line-height: 1.6;
 }
 
 .hero__bio {
-  max-width: 47.5rem;
+  max-width: none;
+  width: 100%;
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--line);
@@ -359,6 +360,7 @@ p:last-child {
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.7;
+  max-width: none;
 }
 
 .hero__actions {
@@ -372,12 +374,15 @@ p:last-child {
 .project-grid--cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
-  align-items: start;
+  gap: 3.5rem;
+  align-items: stretch;
 }
 
 .project-card {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card__image {
@@ -387,6 +392,7 @@ p:last-child {
   overflow: hidden;
   background: var(--sage);
   box-shadow: var(--shadow-soft);
+  flex-shrink: 0;
 }
 
 .project-card__image img {
@@ -403,6 +409,9 @@ p:last-child {
 }
 
 .project-card__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
   padding-top: 1.5rem;
 }
 
@@ -412,7 +421,13 @@ p:last-child {
 }
 
 .project-card__content p {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  flex: 1 1 auto;
+}
+
+.project-card__content .project__link {
+  margin-top: auto;
+  padding-top: 1.25rem;
 }
 
 /* —— Bio —— */
