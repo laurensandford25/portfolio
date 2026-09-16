@@ -374,8 +374,9 @@ p:last-child {
 .project-grid--cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 3.5rem;
+  gap: 2.5rem 3rem;
   align-items: stretch;
+  margin-top: 0.5rem;
 }
 
 .project-card {
@@ -383,6 +384,7 @@ p:last-child {
   display: flex;
   flex-direction: column;
   height: 100%;
+  gap: 0;
 }
 
 .project-card__image {
@@ -453,6 +455,11 @@ p:last-child {
 .project-grid {
   display: grid;
   gap: 0;
+}
+
+.project-grid.project-grid--cards,
+.project-grid--cards {
+  gap: 2.5rem 3rem;
 }
 
 .project {
