@@ -218,7 +218,7 @@ p:last-child {
 }
 
 .section__intro {
-  max-width: 38rem;
+  max-width: none;
   margin-bottom: 2rem;
 }
 
