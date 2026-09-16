@@ -1,3 +1,9 @@
+// Prefer clean URLs: /about/ not /about/index.html, / not /index.html
+if (location.pathname.endsWith("/index.html")) {
+  const clean = location.pathname.slice(0, -"index.html".length) || "/";
+  location.replace(clean + location.search + location.hash);
+}
+
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 

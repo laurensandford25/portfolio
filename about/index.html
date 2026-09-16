@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Lauren Sandford</title>
+    <meta
+      name="description"
+      content="About Lauren Sandford — digital marketer specializing in SEO-led content, with a mix of professional background and personal bio."
+    />
+    <meta property="og:title" content="About | Lauren Sandford" />
+    <meta
+      property="og:description"
+      content="Digital marketer specializing in SEO-led content — professional background and a bit about me personally."
+    />
+    <meta property="og:url" content="https://laurenmsandford.com/about/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="/">Lauren Sandford</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/" aria-current="page">About</a></li>
+            <li><a href="/work/">Work</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="section" aria-labelledby="about-heading">
+        <p class="eyebrow reveal">About</p>
+        <h1 id="about-heading" class="reveal">Nice to meet you</h1>
+
+        <div class="about-layout" style="margin-top: 2rem">
+          <figure class="about-photo reveal">
+            <figcaption class="about-photo__label">
+              [Your photo]<br />
+              Add a JPG/PNG in an <code>images/</code> folder and point this figure at it.
+            </figcaption>
+          </figure>
+
+          <div class="reveal reveal-delay-1">
+            <p>
+              <span class="placeholder-note">[About bio — mostly professional]</span>
+              Use most of this space for career context: industries you’ve worked in, how you approach SEO and
+              content, and the kinds of problems you like solving. Aim for clear and warm—not a full resume dump.
+            </p>
+            <p>
+              <span class="placeholder-note">[Personal note — shorter]</span>
+              Add a short personal beat so hiring managers see a human: where you’re based, what you’re into outside
+              work, or how you spend a weekend. Keep it lighter than the professional section above.
+            </p>
+            <div class="about-actions">
+              <a class="button button--primary" href="/resume.pdf" download>Download resume</a>
+              <a class="button button--secondary" href="/contact/">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="color-band color-band--green" aria-label="Work prompt">
+        <div class="color-band__inner reveal">
+          <div>
+            <h2>See the work behind the bio</h2>
+            <p>Twelve compact project slots — fill with case studies when you have outcomes, samples when you don’t.</p>
+          </div>
+          <a class="button button--primary" href="/work/">See all work</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>© <span data-year></span> Lauren Sandford</p>
+        <div class="site-footer__links">
+          <a href="https://www.linkedin.com/in/lauren-sandford/" rel="noopener noreferrer" target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:you@email.com">you@email.com</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
