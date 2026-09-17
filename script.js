@@ -45,6 +45,20 @@ if (contactForm) {
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+function scrollToHashTarget() {
+  const id = location.hash.slice(1);
+  if (!id) return;
+  const target = document.getElementById(id);
+  if (!target) return;
+  target.classList.add("is-visible");
+  target.scrollIntoView({ behavior: "auto", block: "start" });
+}
+
+if (location.hash) {
+  scrollToHashTarget();
+  window.addEventListener("load", scrollToHashTarget);
+}
+
 if (!reduceMotion && "IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {

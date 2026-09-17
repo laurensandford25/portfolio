@@ -46,6 +46,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 110%;
+  scroll-padding-top: calc(var(--header-h) + 1.25rem);
 }
 
 body {
@@ -496,6 +497,7 @@ p:last-child {
   align-items: stretch;
   padding: 1.75rem 0;
   border-top: 1px solid var(--line);
+  scroll-margin-top: calc(var(--header-h) + 1.25rem);
 }
 
 .project:last-child {
