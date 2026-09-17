@@ -355,9 +355,9 @@ p:last-child {
 
 .hero--text .hero__intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  max-width: 42rem;
 }
 
 .hero--text .hero__role {
@@ -971,11 +971,6 @@ button.button {
   .hero {
     grid-template-columns: 1fr;
     align-items: start;
-  }
-
-  .hero--text .hero__intro {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
   }
 
   .hero__panel {
